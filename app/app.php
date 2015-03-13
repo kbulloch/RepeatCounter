@@ -16,5 +16,10 @@
         return $app['twig']->render('form.twig');
     });
 
+    //set up the results page route
+    $app->get("/results", function() use ($app) {
+        $phrase = $_GET['user_string'];
+    });
+
     return $app;
 ?>
