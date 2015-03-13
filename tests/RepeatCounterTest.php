@@ -73,5 +73,19 @@
             //Assert
             $this->assertEquals("Repeats: 0", $result);
         }
+
+        function testTwoMatch()
+        {
+            //Arrange
+            $test_two_match = new RepeatCounter;
+            $string = "a a";
+            $search = "a";
+
+            //Act
+            $result = $test_two_match->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 2", $result);
+        }
     }
 ?>
