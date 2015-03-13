@@ -129,5 +129,19 @@
             //Assert
             $this->assertEquals("Repeats: 1", $result);
         }
+
+        function testTwoWordOneMatch()
+        {
+            //Arrange
+            $test_two_word_one_match = new RepeatCounter;
+            $string = "Not equal";
+            $search = "equal";
+
+            //Act
+            $result = $test_two_word_one_match->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 1", $result);
+        }
     }
 ?>
