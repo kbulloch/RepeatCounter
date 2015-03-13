@@ -8,3 +8,18 @@ Specifications for RepeatCounter
     Main string: "a"
     Search query: "a"
     Output: "Repeats: 1"
+
+2   Take a single letter input that does not match the search query, to show that
+    a non-match will return a repeat count of zero.
+
+    Main string: "a"
+    Search query: "b"
+    Output: "Repeats: 0"
+
+
+3   Take a capital letter as the main string and a lowercase match in the search
+    query to show to case sensitivity does not matter in the simplest case.
+
+    Main string: "A"
+    Search query: "a"
+    Output: "Repeats: 1"
