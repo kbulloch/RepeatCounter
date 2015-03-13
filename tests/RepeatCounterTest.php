@@ -59,5 +59,19 @@
             //Assert
             $this->assertEquals("Repeats: 0", $result);
         }
+
+        function testIgnoreRepeatingPartialMatch()
+        {
+            //Arrange
+            $test_ignore_repeating_partial_match = new RepeatCounter;
+            $string = "aa";
+            $search = "a";
+
+            //Act
+            $result = $test_ignore_repeating_partial_match->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 0", $result);
+        }
     }
 ?>
