@@ -93,7 +93,7 @@ Specifications for RepeatCounter
     Main string: "How much wood could a woodchuck chuck if a woodchuck could chuck wood"
     Search query: "woodchuck"
     Output: "Repeats: 2"
-    
+
 
 11  Take a phrase with some repeated words and partial matches as the main
     string and one of those words as the search query.  This shows that multiple
@@ -102,3 +102,12 @@ Specifications for RepeatCounter
     Main string: "How much wood could a woodchuck chuck if a woodchuck could chuck wood"
     Search query: "wood"
     Output: "Repeats: 2"
+
+
+12  Take a phrase with some repeated words as the main string and none of those
+    words as the search query.  This shows that zero matches of full words are
+    counted correctly.
+
+    Main string: "How much wood could a woodchuck chuck if a woodchuck could chuck wood"
+    Search query: "black"
+    Output: "Repeats: 0"
