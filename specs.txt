@@ -9,6 +9,7 @@ Specifications for RepeatCounter
     Search query: "a"
     Output: "Repeats: 1"
 
+
 2   Take a single letter input that does not match the search query, to show that
     a non-match will return a repeat count of zero.
 
@@ -23,3 +24,80 @@ Specifications for RepeatCounter
     Main string: "A"
     Search query: "a"
     Output: "Repeats: 1"
+
+
+4   Take a two character input as the main string and a single character search
+    query matching one in the main string.  This test will show that a partial
+    match of the search query will not be counted as a repeat.
+
+    Main string: "ab"
+    Search query: "a"
+    Output: "Repeats: 0"
+
+
+5   Take a two repeating character input in the main string with no spaces, and
+    the same single character as the search query.  This test will show that a
+    repeating partial match will not be counted.
+
+    Main string: "aa"
+    Search query: "a"
+    Output: "Repeats: 0"
+
+
+6   Take a two character spaced input as the main string and a matching single
+    character as the search query.  This will show that repeated matches will
+    be counted.
+
+    Main string: "a a"
+    Search query: "a"
+    Output: "Repeats: 2"
+
+
+7   Take two different characters, spaced as the main string and matching
+    character as the search query.  This will show that a match and non-match
+    can be identified independently.
+
+    Main string: "a b"
+    Search query:  "a"
+    Output: "Repeats: 1"
+
+
+7   Take a three character spaced input with two matches to the search query,
+    showing that a non-match and a repeated match can be identified individually.
+
+    Main string: "a z a"
+    Search query: "a"
+    Output: "Repeats: 2"
+
+
+8   Take a full word as the main input and the matching word as the search query,
+    show that multi-character recognition is working.
+
+    Main string: "Equal"
+    Search string: "Equal"
+    Output: "Repeats: 1"
+
+
+9   Take two different words as the main string and a match in the search query,
+    showing that full word matches and non-matches can be identified individually.
+
+    Main string: "Not equal"
+    Search query: "equal"
+    Output: "Repeats: 1"
+
+
+10  Take a phrase with some repeated words as the main string and one of those
+    words as the search query.  This shows that multiple matches of full words
+    are counted correctly.
+
+    Main string: "How much wood could a woodchuck chuck if a woodchuck could chuck wood"
+    Search query: "woodchuck"
+    Output: "Repeats: 2"
+
+11  Take a phrase with some repeated words and partial matches as the main
+    string and one of those words as the search query.  This shows that multiple
+    matches of full words are counted correctly, and partial matches are ignored.
+
+    Main string: "How much wood could a woodchuck chuck if a woodchuck could chuck wood"
+    Search query: "wood"
+    Output: "Repeats: 2"
