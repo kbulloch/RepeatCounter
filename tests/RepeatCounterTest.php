@@ -58,6 +58,6 @@
 
             //Assert
             $this->assertEquals("Repeats: 0", $result);
-
+        }
     }
 ?>
