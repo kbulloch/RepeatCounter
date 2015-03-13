@@ -7,6 +7,9 @@
             if($query == $main){
                 return "Repeats: 1";
             }
+            else {
+                return "Repeats: 0";
+            }
         }
     }
 ?>
