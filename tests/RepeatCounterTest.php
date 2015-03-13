@@ -157,5 +157,19 @@
             //Assert
             $this->assertEquals("Repeats: 2", $result);
         }
+
+        function testPhraseTwoMatchAndPartialMatch()
+        {
+            //Arrange
+            $test_phrase_two_match_and_partial_match = new RepeatCounter;
+            $string = "How much wood could a woodchuck chuck if a woodchuck could chuck wood";
+            $search = "wood";
+
+            //Act
+            $result = $test_phrase_two_match_and_partial_match->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 2", $result);
+        }
     }
 ?>
