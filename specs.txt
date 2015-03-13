@@ -1,0 +1,10 @@
+Specifications for RepeatCounter
+
+
+1   Take a single letter input as the main string and the matching single letter
+    input for the search query.  This input is the simplest possible case because
+    it is a single character, not repeated. Return a repeat count of one.
+
+    Main string: "a"
+    Search query: "a"
+    Output: "Repeats: 1"
