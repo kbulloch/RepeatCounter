@@ -17,5 +17,19 @@
             //Assert
             $this->assertEquals("Repeats: 1", $result);
         }
+
+        function testSingleLetterMismatch()
+        {
+            //Arrange
+            $test_single_letter_mismatch = new RepeatCounter;
+            $string = "a";
+            $search = "b";
+
+            //Act
+            $result = $test_single_letter_mismatch->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 0", $result);
+        }
     }
 ?>
