@@ -87,5 +87,19 @@
             //Assert
             $this->assertEquals("Repeats: 2", $result);
         }
+
+        function testTwoLettersOneMatch()
+        {
+            //Arrange
+            $test_two_letters_one_match = new RepeatCounter;
+            $string = "a b";
+            $search = "a";
+
+            //Act
+            $result = $test_two_letters_one_match->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 1", $result);
+        }
     }
 ?>
