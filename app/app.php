@@ -1,5 +1,6 @@
 <?php
 
+    //require the needed files
     require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/RepeatCounter.php";
 
@@ -18,11 +19,23 @@
 
     //set up the results page route
     $app->get("/results", function() use ($app) {
+
+        //instantiate a new counter object
         $repeat_counter = new RepeatCounter;
+
+        //get user input from the form
         $phrase = $_GET['user_string'];
         $query = $_GET['user_query'];
+
+        //calculate the number of repeats
         $number_of_repeats = $repeat_counter->countRepeats($phrase, $query);
-        return $app['twig']->render('results.twig', array('the_count' => $number_of_repeats));
+
+        //render the results page
+        return $app['twig']->render('results.twig', array(
+            'the_count' => $number_of_repeats,
+            'the_string' => $GLOBALS['the_string'],
+            'the_query' => $GLOBALS['the_query']
+            ));
     });
 
     return $app;
