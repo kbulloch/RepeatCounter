@@ -45,5 +45,19 @@
             //Assert
             $this->assertEquals("Repeats: 1", $result);
         }
+
+        function testIgnorePartialMatch()
+        {
+            //Arrange
+            $test_ignore_partial_match = new RepeatCounter;
+            $string = "ab";
+            $search = "a";
+
+            //Act
+            $result = $test_ignore_partial_match->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 0", $result);
+
     }
 ?>
