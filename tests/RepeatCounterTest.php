@@ -31,5 +31,19 @@
             //Assert
             $this->assertEquals("Repeats: 0", $result);
         }
+
+        function testSingleLetterCaseInsensitive()
+        {
+            //Arrange
+            $test_single_letter_case_insensitive = new RepeatCounter;
+            $string = "A";
+            $search = "a";
+
+            //Act
+            $result = $test_single_letter_case_insensitive->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 1", $result);
+        }
     }
 ?>
