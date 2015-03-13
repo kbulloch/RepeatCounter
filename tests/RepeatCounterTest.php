@@ -101,5 +101,19 @@
             //Assert
             $this->assertEquals("Repeats: 1", $result);
         }
+
+        function testThreeLettersTwoMatch()
+        {
+            //Arrange
+            $test_three_letters_two_match = new RepeatCounter;
+            $string = "a z a";
+            $search = "a";
+
+            //Act
+            $result = $test_three_letters_two_match->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 2", $result);
+        }
     }
 ?>
