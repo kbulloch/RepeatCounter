@@ -115,5 +115,19 @@
             //Assert
             $this->assertEquals("Repeats: 2", $result);
         }
+
+        function testOneWordMatch()
+        {
+            //Arrange
+            $test_one_word_match = new RepeatCounter;
+            $string = "Equal";
+            $search = "Equal";
+
+            //Act
+            $result = $test_one_word_match->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 1", $result);
+        }
     }
 ?>
