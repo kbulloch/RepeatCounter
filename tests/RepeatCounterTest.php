@@ -143,5 +143,19 @@
             //Assert
             $this->assertEquals("Repeats: 1", $result);
         }
+
+        function testPhraseTwoMatch()
+        {
+            //Arrange
+            $test_phrase_two_match = new RepeatCounter;
+            $string = "How much wood could a woodchuck chuck if a woodchuck could chuck wood";
+            $search = "woodchuck";
+
+            //Act
+            $result = $test_phrase_two_match->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 2", $result);
+        }
     }
 ?>
