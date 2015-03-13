@@ -18,7 +18,11 @@
 
     //set up the results page route
     $app->get("/results", function() use ($app) {
+        $repeat_counter = new RepeatCounter;
         $phrase = $_GET['user_string'];
+        $query = $_GET['user_query'];
+        $number_of_repeats = $repeat_counter->countRepeats($phrase, $query);
+        return $app['twig']->render('results.twig', array('the_count' => $number_of_repeats));
     });
 
     return $app;
