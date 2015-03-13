@@ -5,8 +5,8 @@
         function countRepeats($main, $query)
         {
             //make parameters globals so they can be used in the results page
-            $main = $GLOBALS['the_string'];
-            $query = $GLOBALS['the_query'];
+            $GLOBALS['the_string'] = $main;
+            $GLOBALS['the_query'] = $query;
 
             //ignore case sensitivity
             $main = strtolower($main);
