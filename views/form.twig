@@ -6,6 +6,16 @@
 <body>
     <div class="container">
         <h1>Count repeated words! Wow.</h1>
+        <form action="/results">
+            <div class="form-group">
+                <label for="user_string">Enter your phrase</label>
+                <input id="user_string" name="user_string" class="form-control" type="text" required>
+            </div>
+            <div class="form-group">
+                <label for="user_query">Which word do you want to count?</label>
+                <input id="user_query" name="user_query" class="form-control" type="text" required>
+            </div>
+        </form>
     </div>
 </body>
 </html>
