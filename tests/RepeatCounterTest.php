@@ -171,5 +171,19 @@
             //Assert
             $this->assertEquals("Repeats: 2", $result);
         }
+
+        function testPhraseNoMatch()
+        {
+            //Arrange
+            $test_phrase_no_match = new RepeatCounter;
+            $string = "How much wood could a woodchuck chuck if a woodchuck could chuck wood";
+            $search = "black";
+
+            //Act
+            $result = $test_phrase_no_match->countRepeats($string, $search);
+
+            //Assert
+            $this->assertEquals("Repeats: 0", $result);
+        }
     }
 ?>
