@@ -35,7 +35,7 @@
             'the_count' => $number_of_repeats,
             'the_string' => $GLOBALS['the_string'],
             'the_query' => $GLOBALS['the_query']
-            ));
+        ));
     });
 
     return $app;
