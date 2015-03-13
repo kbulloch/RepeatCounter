@@ -8,7 +8,25 @@ This app will take a phrase from a user and word to search for in that phrase.
 The app will return the number of repeats of the word that was searched for.
 
 ----
-Setup
+SETUP
+
+Prerequisites:
+You must have php installed on the computer that will run this app
+The following terminal commands are for Mac and Linux based systems
+
+1) Navigate to an appropriate directory then run the following commands in your terminal:
+
+git clone https://github.com/kbulloch/RepeatCounter.git
+
+cd RepeatCounter/web
+
+php -S localhost:8000
+
+2) Then in your browser enter this URL:
+
+localhost:8000
+
+You can now count repeated words! Stellar.
 
 ----
 
