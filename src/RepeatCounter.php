@@ -16,15 +16,13 @@
 
             //look at each word one by one for a match
             foreach($main_words as $my_word){
-                
+                //increment repeat count when match found
+                if($query == $my_word){
+                    ++$num_repeats;
+                }
             }
 
-            if($query == $main){
-                return "Repeats: 1";
-            }
-            else {
-                return "Repeats: 0";
-            }
+            return "Repeats: " . $num_repeats;
         }
     }
 ?>
