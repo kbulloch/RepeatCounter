@@ -62,7 +62,7 @@ Specifications for RepeatCounter
     Output: "Repeats: 1"
 
 
-7   Take a three character spaced input with two matches to the search query,
+8   Take a three character spaced input with two matches to the search query,
     showing that a non-match and a repeated match can be identified individually.
 
     Main string: "a z a"
@@ -70,7 +70,7 @@ Specifications for RepeatCounter
     Output: "Repeats: 2"
 
 
-8   Take a full word as the main input and the matching word as the search query,
+9   Take a full word as the main input and the matching word as the search query,
     show that multi-character recognition is working.
 
     Main string: "Equal"
@@ -78,7 +78,7 @@ Specifications for RepeatCounter
     Output: "Repeats: 1"
 
 
-9   Take two different words as the main string and a match in the search query,
+10   Take two different words as the main string and a match in the search query,
     showing that full word matches and non-matches can be identified individually.
 
     Main string: "Not equal"
@@ -86,7 +86,7 @@ Specifications for RepeatCounter
     Output: "Repeats: 1"
 
 
-10  Take a phrase with some repeated words as the main string and one of those
+11  Take a phrase with some repeated words as the main string and one of those
     words as the search query.  This shows that multiple matches of full words
     are counted correctly.
 
@@ -95,7 +95,7 @@ Specifications for RepeatCounter
     Output: "Repeats: 2"
 
 
-11  Take a phrase with some repeated words and partial matches as the main
+12  Take a phrase with some repeated words and partial matches as the main
     string and one of those words as the search query.  This shows that multiple
     matches of full words are counted correctly, and partial matches are ignored.
 
@@ -104,7 +104,7 @@ Specifications for RepeatCounter
     Output: "Repeats: 2"
 
 
-12  Take a phrase with some repeated words as the main string and none of those
+13  Take a phrase with some repeated words as the main string and none of those
     words as the search query.  This shows that zero matches of full words are
     counted correctly.
 
